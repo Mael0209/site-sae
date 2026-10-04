@@ -1,6 +1,3 @@
-import NavBar from "./components/Navbar";
-import {images} from "./utils";
-import Bouton, {varianteBouton} from "./components/Bouton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/refuge.css";
 import "./css/App.css";
