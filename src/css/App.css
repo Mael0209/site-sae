@@ -1,0 +1,41 @@
+body {
+    background-color: var(--fond);
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+}
+
+.images img {
+    margin: 0.3em;
+}
+
+.boutonbleu {
+    background-color: var(--nuit);
+    border: white;
+    color: var(--blanc);
+    --bs-btn-hover-bg: var(--nuit-survol);
+    --bs-btn-hover-color: var(--blanc);
+}
+
+.boutonblanc {
+    background-color: var(--surface);
+    border: 2px solid transparent;
+    border-color: var(--nuit);
+    color: var(--nuit);
+    --bs-btn-hover-bg: var(--surface-survol);
+    --bs-btn-hover-color: var(--nuit);
+    --bs-btn-hover-border-color: var(--nuit);
+}
+
+.boutonrouge {
+    background-color: var(--rouge);
+    border: white;
+    color: var(--blanc);
+}
+
+.boutonoff {
+    background-color: grey;
+    border: white;
+}
