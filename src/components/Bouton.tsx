@@ -1,19 +1,11 @@
-import { Button } from "react-bootstrap";
+export enum varianteBouton {
+    primaire = "bouton-primaire",
+    secondaire = "bouton-secondaire",
+    danger = "bouton-danger"
+}
 
-type btnStyle = "bleu" | "blanc" | "rouge" | "off";
-
-export default function Bouton({
-    type,
-    text,
-    isDisabled,
-}: {
-    type: btnStyle;
-    text?: string;
-    isDisabled?: boolean;
-}) {
+export default function Bouton({variante, text}: { variante: varianteBouton; text: string; }) {
     return (
-        <Button variant="info" className={"bouton" + type} disabled={isDisabled}>
-            {text ? text : "bouton"}
-        </Button>
+        <button className={"bouton " + variante} type="button">{text}</button>
     );
 }

@@ -1,6 +1,6 @@
 import NavBar from "./components/Navbar";
 import {images} from "./utils";
-import Bouton from "./components/Bouton";
+import Bouton, {varianteBouton} from "./components/Bouton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/refuge.css";
 import "./css/App.css";
@@ -20,9 +20,9 @@ export default function App() {
                 <img alt="logo" src={images.sanitaires}/>
             </div>
             <div style={{display: "flex", flexFlow: "row wrap", justifyContent: "center", marginBlock: "2em"}}>
-                <Bouton type="bleu" text="Trouver un hébergement"/>
-                <Bouton type="blanc" text="Utiliser ma position"/>
-                <Bouton type="rouge" text="Fermer le centre" isDisabled/>
+                <Bouton variante={varianteBouton.primaire} text="Trouver un hébergement"/>
+                <Bouton variante={varianteBouton.secondaire} text="Utiliser ma position"/>
+                <Bouton variante={varianteBouton.danger} text="Fermer le centre"/>
             </div>
         </>
     );
