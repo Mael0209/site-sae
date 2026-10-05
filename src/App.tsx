@@ -1,6 +1,6 @@
 import {Route, Routes} from "react-router";
 import Layout from "./Layout.tsx";
-import Home from "./Home.tsx";
+import Home from "./pages/Home.tsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./css/refuge.css";
 import "./css/App.css";
