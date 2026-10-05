@@ -19,7 +19,7 @@ export default function NavBar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link as={Link} to="/">Trouver un hébergement</Nav.Link>
-                        <Nav.Link as={Link} to="/">Carte des hébergements</Nav.Link>
+                        <Nav.Link as={Link} to="/carte">Carte des hébergements</Nav.Link>
                         <Nav.Link as={Link} to="/">Historique des alertes</Nav.Link>
                         <Nav.Link as={Link} to="/">Connexion</Nav.Link>
                     </Nav>
