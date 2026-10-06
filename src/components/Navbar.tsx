@@ -21,7 +21,7 @@ export default function NavBar() {
                         <Nav.Link as={Link} to="/trouver-logement">Trouver un hébergement</Nav.Link>
                         <Nav.Link as={Link} to="/carte">Carte des hébergements</Nav.Link>
                         <Nav.Link as={Link} to="/alertes">Historique des alertes</Nav.Link>
-                        <Nav.Link as={Link} to="/">Connexion</Nav.Link>
+                        <Nav.Link as={Link} to="/login">Connexion</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
