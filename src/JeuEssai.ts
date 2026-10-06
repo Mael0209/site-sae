@@ -176,6 +176,28 @@ export const mockZones: Zone[] = [
         ],
         utilisateur: mockUtilisateurs[0],
     },
+    {
+        id: 2,
+        nom: "Périmètre d'alerte - Hortillonnages & Vallée de la Somme",
+        perimetre: [
+            [49.905, 2.315],
+            [49.912, 2.348],
+            [49.898, 2.362],
+            [49.891, 2.328],
+        ],
+        utilisateur: mockUtilisateurs[0],
+    },
+    {
+        id: 3,
+        nom: "Périmètre de sécurité - Espace Industriel Nord",
+        perimetre: [
+            [49.925, 2.260],
+            [49.938, 2.285],
+            [49.922, 2.310],
+            [49.910, 2.280],
+        ],
+        utilisateur: mockUtilisateurs[0],
+    },
 ];
 
 // 6. Incident en cours
@@ -214,7 +236,7 @@ export const mockAlertes: Alerte[] = [
         incident: mockIncidents[0],
         commune: mockCommunes[1],
         zone: null,
-        date_publication: new Date(Date.now() - 1 * 3600 * 1000),
+        date_publication: new Date(Date.now() - 3600 * 1000),
         date_expiration: new Date(Date.now() + 6 * 3600 * 1000),
     },
 ];
