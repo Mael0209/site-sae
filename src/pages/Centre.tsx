@@ -11,7 +11,7 @@ export default function Centre() {
         setCentre(mockCentres.find(c => c.id === id))
     })
 
-    if (!centre) return <p>Erreur : centre non-existant</p>
+    if (!centre) return <p>Erreur : centre pas trouvé ou non-existant</p>
 
     return (
         <>
@@ -19,9 +19,11 @@ export default function Centre() {
             <div className={"fiche mt-5 d-flex flex-column flex-wrap justify-content-center"}>
                 <h2>{centre.nom} : {centre.type}</h2>
                 <h2>{centre.commune.nom}, {centre.code_postal}</h2>
-                <h2>{centre.acces_pmr ? "Accessible PMR" : "Pas accessible PMR"}</h2>
-                <h2>{centre.accueil_animaux ? "Peut accueillir des animaux" : "N'accueille pas d'animaux"}</h2>
+                <h2>Accessible aux PMR : {centre.acces_pmr ? "oui" : "non"}</h2>
+                <h2>Accueil des animaux : {centre.accueil_animaux ? "oui" : "non"}</h2>
+                <h2>Présence de sanitaires : {centre.sanitaire ? "oui" : "non"}</h2>
                 <h2>Places disponibles : {centre.places_dispo}</h2>
+                <h2>Etat : {centre.etat}</h2>
             </div>
         </>
     )
