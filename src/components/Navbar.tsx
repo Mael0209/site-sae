@@ -18,7 +18,7 @@ export default function NavBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={Link} to="/trouver-logement">Trouver un hébergement</Nav.Link>
+                        <Nav.Link as={Link} to="/trouver-centre">Trouver un hébergement</Nav.Link>
                         <Nav.Link as={Link} to="/carte">Carte des hébergements</Nav.Link>
                         <Nav.Link as={Link} to="/alertes">Historique des alertes</Nav.Link>
                         <Nav.Link as={Link} to="/login">Connexion</Nav.Link>

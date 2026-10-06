@@ -1,6 +1,6 @@
 import {MapContainer, TileLayer} from 'react-leaflet'
-import type {CSSProperties, ReactNode} from "react";
-import type {LatLngExpression} from "leaflet";
+import {type CSSProperties, type ReactNode} from "react";
+import {type LatLngExpression} from "leaflet";
 import 'leaflet/dist/leaflet.css';
 
 type carteProps = {
