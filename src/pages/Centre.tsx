@@ -21,8 +21,9 @@ export default function Centre() {
             <Card>
                 <Card.Header>{centre.nom}</Card.Header>
                 <Card.Body>
-                    <Card.Title>{centre.etat}</Card.Title>
-                    <Card.Text>{centre.adresse}, {centre.code_postal} {centre.commune.nom}</Card.Text>
+                    <Card.Title
+                        style={{color: centre.etat == "Ouvert" ? "var(--ouvert-texte)" : centre.etat=="Complet" ? "var(--complet-texte)":"var(--ferme-texte)"}}>{centre.etat}</Card.Title>
+                    <Card.Text>{centre.adresse} {centre.code_postal} {centre.commune.nom}</Card.Text>
                     <Card.Text>
                         Informations :
                         <ul>
@@ -34,9 +35,10 @@ export default function Centre() {
                     </Card.Text>
                     <Card.Footer>
                         <Link to="/carte">
-                            <Bouton variante={varianteBouton.primaire} text="Voir sur la carte"/>
+                            <Bouton variante={varianteBouton.secondaire} text="Voir sur la carte"/>
                         </Link>
                     </Card.Footer>
+                    <p>Responsable : {centre.responsable.nom} {centre.responsable.prenom}</p>
                 </Card.Body>
             </Card>
         </>

@@ -7,9 +7,11 @@ export default function TrouverHebergement() {
             <h1 className={"text-center"}>Trouver un hébergement</h1>
             <div>
                 <ul>
-                    {mockCentres.map(c => <Link key={c.id} to={"/centre/" + c.id}>
-                        <li>{c.nom}</li>
-                    </Link>)}
+                    {mockCentres.map(c =>
+                        <Link key={c.id} to={"/centre/" + c.id}>
+                            <li>{c.nom}</li>
+                        </Link>
+                    )}
                 </ul>
             </div>
         </>
