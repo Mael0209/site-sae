@@ -1,8 +1,9 @@
-import {useParams} from "react-router";
+import {Link, useParams} from "react-router";
 import {mockCentres} from "../JeuEssai.ts";
 import {type Centre} from "../utils.ts";
 import {useEffect, useState} from "react";
 import {Card} from "react-bootstrap";
+import Bouton, {varianteBouton} from "../components/Bouton.tsx";
 
 export default function Centre() {
     const [centre, setCentre] = useState<Centre | undefined>(undefined);
@@ -28,9 +29,14 @@ export default function Centre() {
                             <li>Places disponibles : {centre.places_dispo}</li>
                             <li>Accessible aux PMR : {centre.acces_pmr ? "oui" : "non"}</li>
                             <li>Accessible aux animaux : {centre.accueil_animaux ? "oui" : "non"}</li>
-                            <li>sanitaires : {centre.sanitaire ? "oui" : "non"}</li>
+                            <li>Sanitaires : {centre.sanitaire ? "oui" : "non"}</li>
                         </ul>
                     </Card.Text>
+                    <Card.Footer>
+                        <Link to="/carte">
+                            <Bouton variante={varianteBouton.primaire} text="Voir sur la carte"/>
+                        </Link>
+                    </Card.Footer>
                 </Card.Body>
             </Card>
         </>
