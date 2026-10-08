@@ -24,3 +24,5 @@ export default function App() {
         </Routes>
     );
 }
+
+// TODO : Adapter la prise de données avec la vraie BDD quand disponible

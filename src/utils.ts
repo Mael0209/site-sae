@@ -1,5 +1,7 @@
 import type {LatLngExpression} from "leaflet";
 
+export type StatutCentre = "Ouvert"|"Fermé"|"Complet"
+
 export enum images {
     alerte = "/src/assets/icones/alerte.svg",
     animaux = "/src/assets/icones/animaux.svg",
@@ -46,7 +48,7 @@ export type Centre = {
     responsable: Utilisateur;
     capacite_max: number;
     places_dispo: number;
-    etat: string;
+    etat: StatutCentre;
     acces_pmr: boolean;
     accueil_animaux: boolean;
     sanitaire: boolean;
