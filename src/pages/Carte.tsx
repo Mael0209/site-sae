@@ -25,7 +25,6 @@ export default function Carte() {
     const [afficherZones, setAfficherZones] = useState<boolean>(true);
     const [afficherCentres, setAfficherCentres] = useState<boolean>(true);
 
-
     return (
         <>
             <Row>
