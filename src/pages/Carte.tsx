@@ -48,14 +48,14 @@ export default function Carte() {
                     </div>
                 </Col>
                 <Col xs={12} xl={10}>
-                    <div style={{display: "flex", justifyContent: "center", margin: "2em"}}>
+                    <div className="d-flex justify-content-center m-2">
                         <CarteComp height="500px" width="900px" zoom={11}>
                             {afficherCentres && mockCentres.map(c => <Marker position={c.position}><Popup>{c.nom} <br/>
                                 <Link to={"/centre/" + c.id}>Voir le centre</Link> </Popup></Marker>)}
-                            {afficherZones && mockZones.map(z => <Polygon color="red"
-                                                                          positions={z.perimetre}><Popup>{z.nom}
-                                <br/>-
-                                par {z.utilisateur.nom} {z.utilisateur.prenom} </Popup></Polygon>)}
+                            {afficherZones && mockZones.map(z =>
+                                <Polygon color="red" positions={z.perimetre}>
+                                    <Popup>{z.nom}</Popup>
+                                </Polygon>)}
                             {useLocation && <LocationMarker/>}
                         </CarteComp>
                     </div>
