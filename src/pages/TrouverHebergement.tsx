@@ -38,6 +38,7 @@ export default function TrouverHebergement() {
     return (
         <>
             <h1 className={"text-center"}>Trouver un hébergement</h1>
+            <hr className="container border-2 rounded" />
             <Row>
                 <Col xs={6}>
                     <SelectionFiltre filtre={filtre} setFiltre={setFiltre}/>

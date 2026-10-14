@@ -1,6 +1,7 @@
 import type {LatLngExpression} from "leaflet";
+import {createContext} from "react";
 
-export type StatutCentre = "Ouvert"|"Fermé"|"Complet"
+export type StatutCentre = "Ouvert" | "Fermé" | "Complet"
 
 export enum images {
     alerte = "/src/assets/icones/alerte.svg",
@@ -102,3 +103,10 @@ export type HistoriqueAction = {
     utilisateur: Utilisateur | null;
     date: Date;
 }
+
+type tUserContext = {
+    user: Utilisateur|null;
+    setUser: (user: Utilisateur) => void;
+}
+
+export const UserContext = createContext<tUserContext|null>(null);
