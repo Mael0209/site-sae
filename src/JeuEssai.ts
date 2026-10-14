@@ -1,4 +1,4 @@
-import type { Commune, Role, Utilisateur, Centre, Zone, Incident, Alerte } from "./utils"; // adapte le chemin d'import selon ton projet
+import type { Commune, Role, Utilisateur, Centre, Zone, Incident, Alerte } from "./utils";
 
 // 1. Rôles
 export const mockRoles: Role[] = [

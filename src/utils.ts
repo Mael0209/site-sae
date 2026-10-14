@@ -104,9 +104,9 @@ export type HistoriqueAction = {
     date: Date;
 }
 
-type tUserContext = {
+export type tUserContext = {
     user: Utilisateur|null;
-    setUser: (user: Utilisateur) => void;
+    setUser: (user: Utilisateur|null) => void;
 }
 
 export const UserContext = createContext<tUserContext|null>(null);
